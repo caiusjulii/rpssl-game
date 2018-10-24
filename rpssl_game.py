@@ -15,7 +15,7 @@ computer_choice = ""
 
 
 def choice_to_number(choice):
-    return {'rock': 1, 'paper': 2, 'scissors': 3, 'spock': 4, 'lizard': 5}
+    return {'rock': 0, 'paper': 1, 'scissors': 2, 'spock': 3, 'lizard': 4}
 assert 'rock == 1'
 
 
@@ -33,7 +33,7 @@ assert 'rock == 1'
 
 
 def number_to_choice(number):
-    return {1: 'rock', 2: 'paper', 3: 'scissors', 4: 'spock', 5: 'lizard'}
+    return {0: 'rock', 1: 'paper', 2: 'scissors', 3: 'spock', 4: 'lizard'}
 
     #"""Convert number to choice."""
 
