@@ -15,7 +15,12 @@ computer_choice = ""
 
 
 def choice_to_number(choice):
-    """Convert choice to number."""
+    return {'rock': 1, 'paper': 2, 'scissors': 3, 'spock': 4, 'lizard': 5}
+assert 'rock == 1'
+
+
+
+   # """Convert choice to number."""
 
     # TODO: Implement
     # NOTE
@@ -28,7 +33,9 @@ def choice_to_number(choice):
 
 
 def number_to_choice(number):
-    """Convert number to choice."""
+    return {1: 'rock', 2: 'paper', 3: 'scissors', 4: 'spock', 5: 'lizard'}
+
+    #"""Convert number to choice."""
 
     # TODO: Implement
     # NOTE
@@ -41,7 +48,7 @@ def number_to_choice(number):
 
 
 def random_computer_choice():
-    """Choose randomly for computer."""
+    #"""Choose randomly for computer."""
 
     # TODO: Implement (Hint: Look up random.choice())
 
