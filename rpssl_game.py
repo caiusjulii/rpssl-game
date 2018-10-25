@@ -73,10 +73,12 @@ def choice_result(human_move, computer_move):
 
     if (human_number - computer_number) % 5 in [1, 3]:
         COMPUTER_SCORE += 1
+        print('Computer Wins!')
     elif human_number == computer_number:
         print('tie')
     else:
         HUMAN_SCORE += 1
+        print('You Win!')
 
 
     # A modulo-based solution (see Clever Programmer tutorial and assignment README) will be preferred.
