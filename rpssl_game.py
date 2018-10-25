@@ -15,12 +15,8 @@ computer_choice = ""
 
 
 def choice_to_number(choice):
-    return {'rock': 0, 'paper': 1, 'scissors': 2, 'spock': 3, 'lizard': 4}
-assert 'rock == 1'
-
-
-
-   # """Convert choice to number."""
+    """Convert choice to number."""
+    return {'rock': 0, 'paper': 1, 'scissors': 2, 'spock': 3, 'lizard': 4}[choice]
 
     # TODO: Implement
     # NOTE
@@ -29,13 +25,13 @@ assert 'rock == 1'
     # 1. Dictionary-based solution: 100%
     # 2. Chain-of-if-statements solution: 80%
 
-    raise NotImplementedError
+    #raise NotImplementedError
 
 
 def number_to_choice(number):
-    return {0: 'rock', 1: 'paper', 2: 'scissors', 3: 'spock', 4: 'lizard'}
+    """Convert number to choice."""
+    return {0: 'rock', 1: 'paper', 2: 'scissors', 3: 'spock', 4: 'lizard'}[number]
 
-    #"""Convert number to choice."""
 
     # TODO: Implement
     # NOTE
@@ -44,15 +40,15 @@ def number_to_choice(number):
     # 1. Dictionary-based solution: 100%
     # 2. Chain-of-if-statements solution: 80%
 
-    raise NotImplementedError
+    #raise NotImplementedError
 
 
 def random_computer_choice():
-    #"""Choose randomly for computer."""
-
+    """Choose randomly for computer."""
+    return random.choice(['rock', 'paper', 'scissor', 'spock', 'lizard'])
     # TODO: Implement (Hint: Look up random.choice())
 
-    raise NotImplementedError
+    #raise NotImplementedError
 
 
 def choice_result(human_move, computer_move):
@@ -72,13 +68,21 @@ def choice_result(human_move, computer_move):
     # determine who won and increment their score by 1.
     # In case of tie, don't increment anyone's score.
 
-    # NOTE
+    human_number = choice_to_number(human_choice)
+    computer_number = choice_to_number(computer_choice)
+
+    if (human_number - computer_number) % 5 in [1, 3]:
+        COMPUTER_SCORE += 1
+    elif human_number == computer_number:
+        print('tie')
+    else:
+        HUMAN_SCORE += 1
+
+
     # A modulo-based solution (see Clever Programmer tutorial and assignment README) will be preferred.
     # Evaluation will be as follows:
     # 1. Modulo-based solution: 100%
     # 2. Chain-of-if-statements solution: 80%
-
-    raise NotImplementedError
 
 
 # DO NOT REMOVE THESE TEST FUNCTIONS.
